@@ -44,8 +44,8 @@
 ## SoF OAuth Flow
 ![Overview](http://www.websequencediagrams.com/cgi-bin/cdraw?lz=RUhSIFNlc3Npb24gLT4-IEFwcDogUmVkaXJlY3QgdG8gaHR0cHM6Ly97YXBwIGxhdW5jaF91cml9P1xuAAgGPTEyMyZcbmlzcz0AIwlmaGlyIGJhc2UgdXJsfQpBcHAgLT4gRUhSIEZISVIgU2VydmVyOiBHRVQAVgoAJg4vbWV0YWRhdGEKACcPIC0AgR4HW0NvbmZvcm1hbmNlIHN0YXRlbWVudCBpbmNsdWRpbmcgT0F1dGggMi4wIGVuZHBvaW50IFVSTHNdAIEIBwCBCgZBdXRoegCBCAkAgWQVZWhyIGF1dGhvcml6AIFLBj9cbnNjb3BlPQCCCgYmXG4AewU9YWJjJgCCCA9hdWQ9AIIADyZcbi4uLgo&s=default)
 
-### 1) Launch mPOWEr using Redirect URL
-Provide a `redirect_url`, which is set in the App Orchard configuration. This url will be called by MyChart/Hyperspace when mPOWEr is launched. This behavior can be simulated in the App Orchard `Documentation > Launching your app from Epic > SMART on FHIR (OAuth2)` launch button.
+### 1) Launch mPOWEr using Launch URL
+Provide a `launch_url`. This url will be called by MyChart/Hyperspace when mPOWEr is launched. This behavior can be simulated in the App Orchard `Documentation > Launching your app from Epic > SMART on FHIR (OAuth2)` launch button.
 
 ![App Orchard Launch](http://www.clipular.com/c/5012200994635776.png?k=TAvIqkBuLGoUQp1Jp_X-NWWYtpI)
 
