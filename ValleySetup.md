@@ -138,13 +138,13 @@ The implementation of SMART specifications in this area likely varies by EHR ven
 ### SMART Specs Overview
 **The SMART specs give an overview of how to access user data:**
 
-*Scopes for requesting identity data
+*Scopes for requesting identity data*
 
-Some apps need to authenticate the clinical end-user. This can be accomplished by requesting a pair of OpenID Connect scopes: openid and profile.
+*Some apps need to authenticate the clinical end-user. This can be accomplished by requesting a pair of OpenID Connect scopes: openid and profile.*
 
-When these scopes are requested (and the request is granted), the app will receive an id_token that comes alongside the access token.
+*When these scopes are requested (and the request is granted), the app will receive an id_token that comes alongside the access token.*
 
-This token must be validated according to the OIDC specification. To learn more about the user, the app should treat the “profile” claim as the URL of a FHIR resource representing the current user. This will be a resource of type Patient, Practitioner, or RelatedPerson.*
+*This token must be validated according to the OIDC specification. To learn more about the user, the app should treat the “profile” claim as the URL of a FHIR resource representing the current user. This will be a resource of type Patient, Practitioner, or RelatedPerson.*
 
 **In addition, they provide information about the `User` scope:**
 
