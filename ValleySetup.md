@@ -131,3 +131,21 @@ https://github.com/opauth/opauth/wiki/Strategy-contribution-guide
 The only mandatory method for an Opauth strategy is `public function request()`. This is the function that handles the authentication with the authentication provider.
 
 You are free to include other methods if the authentication process requires several round-trips. By declaring a method public, it will be reachable directly through HTTP via http://path_to_opauth/STRATEGY/METHOD_NAME.
+
+## OAuth Scopes and User Identity
+The implementation of SMART specifications in this area likely varies by EHR vendor. Determining the identity of the user logged in is important, since we need to differentiate between patients (MyChart Login) and clinicians (Hyperspace start).
+
+### SMART Specs Overview
+**The SMART specs give an overview of how to access user data:**
+
+*Scopes for requesting identity data
+
+Some apps need to authenticate the clinical end-user. This can be accomplished by requesting a pair of OpenID Connect scopes: openid and profile.
+
+When these scopes are requested (and the request is granted), the app will receive an id_token that comes alongside the access token.
+
+This token must be validated according to the OIDC specification. To learn more about the user, the app should treat the “profile” claim as the URL of a FHIR resource representing the current user. This will be a resource of type Patient, Practitioner, or RelatedPerson.*
+
+**In addition, they provide information about the `User` scope:**
+
+*User-level scopes allow access to specific data that a user can access. Note that this isn’t just data about the user; it’s data available to that user. User-level scopes take the form: user/:resourceType.(read|write|*).*
