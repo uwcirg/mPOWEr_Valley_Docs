@@ -135,7 +135,7 @@ You are free to include other methods if the authentication process requires sev
 ## OAuth Scopes and User Identity
 The implementation of SMART specifications in this area likely varies by EHR vendor. Determining the identity of the user logged in is important, since we need to differentiate between patients (MyChart Login) and clinicians (Hyperspace start).
 
-From what was mentioned at FHIRWorks, it appears **Epic** does not really utilize scopes in any meaningful way. This is a good area to ask for clarification on, and figure out the current/future role of scopes. 
+From what was mentioned at FHIRWorks, it appears **Epic** does not really utilize scopes in any meaningful way. This is a good area to ask for clarification on, and figure out the current/future role of scopes. Here's a relevant 
 
 ### SMART Specs Overview
 **The SMART specs give an overview of how to access user data:**
