@@ -153,3 +153,11 @@ From what was mentioned at FHIRWorks, it appears **Epic** does not really utiliz
 *User-level scopes allow access to specific data that a user can access. Note that this isn’t just data about the user; it’s data available to that user. User-level scopes take the form: user/:resourceType.(read|write|*).*
 
 ## mPOWEr Authentication Flow
+Notes on record creation/update, and redirection:
+1. if results->systemlogin is set, the current user is a provider
+1. If we don't find a user matching that epic ID, we create one.
+1. If we do find the user, we update their record.
+1. If the user is a provider viewing a patient record, then we also create/update a patient record as necessary.
+1. Note abuse of the provider/user's last4ssn element here... we're using that as a temporary store for the cpro id of the patient who this provider is reviewing during this auth session.
+1. patients/viewAll redirects to /mpower/patient/[patient ID]. 
+1. no need to redirect patients, as they just go to their usual home page.
