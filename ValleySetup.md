@@ -152,4 +152,4 @@ From what was mentioned at FHIRWorks, it appears **Epic** does not really utiliz
 
 *User-level scopes allow access to specific data that a user can access. Note that this isn’t just data about the user; it’s data available to that user. User-level scopes take the form: user/:resourceType.(read|write|*).*
 
-
+## mPOWEr Authentication Flow
